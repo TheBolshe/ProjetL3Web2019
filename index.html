@@ -4,7 +4,7 @@
 <head>
   <title>Théâtres de Bourbon</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -13,7 +13,24 @@
   </header>
 
   <nav class="menu">
-
+    <ul class="navbar">
+      Le site :
+      <div id="vignette">
+          <img class="vignette" src="img/logo.jpg" alt="[logo de l'association vers l'accueil du site]" width="30%" height="30%" decoding="low" onclick="acceuil()">
+      </div>
+      <li onclick="presentation()">
+        Qui sommes nous ?
+      </li>
+      <li onclick="programmation()">
+        Programmation
+      </li>
+      <li onclick="spectacle()">
+        Spectacles
+      </li>
+      <li onclick="tarif()">
+        Tarifs
+      </li>
+    </ul>
   </nav>
 
   <div class="petitPanier">
@@ -21,7 +38,7 @@
 
     <table></table>
   </div>
-  
+
   <main>
 
   </main>
