@@ -6,10 +6,10 @@ function presentation(){
 
 }
 
-function presentation(){
+function programmation(){
 
 }
 
 function tarif(){
-  
+
 }
