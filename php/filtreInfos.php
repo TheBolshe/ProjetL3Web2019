@@ -12,8 +12,6 @@
   for ($i = 1; $i < count($csv); $i++) {
     if ($csv[$i][2] == $nom) {
       //faire des trucs stylés
-      //echo json_encode($csv[$i]);
-      //echo "<br>";
       array_push($data -> jour, $csv[$i][0]);
       array_push($data -> Heure, $csv[$i][1]);
       array_push($data -> Lieu, $csv[$i][3]);
