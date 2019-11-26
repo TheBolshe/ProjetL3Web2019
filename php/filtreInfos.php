@@ -1,12 +1,13 @@
 <?php
+  header('Content-Type: application/json');
   class donnee {
     public $jour = [];
     public $Heure = [];
     public $Lieu = [];
     public $Village = [];
   }
-  //$nom =  $_POST['nom'];
-  $nom = "Le Tartuffe ou l'imposteur";
+  $nom =  $_POST['nom'];
+  //$nom = "Le Tartuffe ou l'imposteur";
   $data = new donnee;
   $csv = array_map('str_getcsv', file('../data/ResultatsFestival.csv'));
   for ($i = 1; $i < count($csv); $i++) {
@@ -18,5 +19,6 @@
       array_push($data -> Village, $csv[$i][4]);
     }
   }
+
   echo json_encode($data);
  ?>
