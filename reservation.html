@@ -148,6 +148,7 @@
           <section><!-- Réservation de tickets -->
               <h1 id="label_reservation">Réservation de tickets</h1>
               <form class="formulaire_resa" action="formulaire.php" method="post" id="form">
+                Spectacles
                 <select id="form_spectacle" name="nom_spectacle" onchange="quelHeure(this.id,'form_heure')">
                   <option value=""></option>
                   <option value="BARBARA, OÙ RÊVENT MES SAISONS?">BARBARA, OÙ RÊVENT MES SAISONS?</option>
@@ -169,10 +170,13 @@
                   <option value="PORT RACINES">PORT RACINES</option>
                   <option value="TITRE PROVISOIRE">TITRE PROVISOIRE</option>
                 </select>
+                Horaires
                 <select id="form_heure" name="horaire" >
 
                 </select>
+                Tarifs
                 <select id="form_tarif" name="tarif_spectacle">
+                  <option value=""></option>
                   <option value="">Plein tarif : 15 €</option>
                   <option value="">Tarif réduit (-25 ans) : 10 €</option>
                   <option value="">Tarif enfants : gratuit</option>

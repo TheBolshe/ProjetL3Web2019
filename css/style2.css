@@ -54,6 +54,38 @@ body {
 	width:70%;
 }
 
+select{
+	width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+	border-radius: 1em;
+  box-sizing: border-box;
+	border: 2px solid #000;
+	background: #d7b37d;
+	font-family:cursive;
+	font-size: 20px;
+}
+select:hover{
+	background-color: #c7974d ;
+	transition: 0.2s all;
+}
+
+button{
+	width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+	border-radius: 1em;
+  box-sizing: border-box;
+	border: 2px solid #000;
+	background: #d7b37d;
+	font-family:cursive;
+	font-size: 20px;
+}
+
+button:hover{
+	background-color: #c7974d ;
+	transition: 0.2s all;
+}
 
 footer {
     position: fixed;
