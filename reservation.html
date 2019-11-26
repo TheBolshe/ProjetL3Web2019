@@ -148,30 +148,31 @@
           <section><!-- Réservation de tickets -->
               <h1 id="label_reservation">Réservation de tickets</h1>
               <form class="formulaire_resa" action="formulaire.php" method="post" id="form">
-                <select class="" name="nom_spectacle">
-                  <option value="">BARBARA, OÙ RÊVENT MES SAISONS?</option>
-                  <option value="">LE CHÂTEAU DE MA MÈRE</option>
-                  <option value="">FRICASSÉE DE BERNIQUES SUR LIT DE PRÉVERT</option>
-                  <option value="">HUGO ES TU LÀ?</option>
-                  <option value="">LA DEMANDE EN MARIAGE ET L'OURS</option>
-                  <option value="">LA GLOIRE DE MON PÈRE</option>
-                  <option value="">LA PROMESSE DE L'AUBE</option>
-                  <option value="">LE MARCHAND DE VENISE</option>
-                  <option value="">LE MARIAGE</option>
-                  <option value="">LE PROPHÈTE</option>
-                  <option value="">LE TARTUFFE OU L'IMPOSTEUR</option>
-                  <option value="">LES CONFESSIONS : LES ANNÉES DE JEUNESSE</option>
-                  <option value="">LES CONFESSIONS : LES ANNÉES DE MATURITÉ</option>
-                  <option value="">LES CONFESSIONS : LES ANNÉES DE SAGESSE</option>
-                  <option value="">LES SOLILOQUES DE MARIETTE</option>
-                  <option value="">MADEMOISELLE JULIE</option>
-                  <option value="">PORT RACINES</option>
-                  <option value="">TITRE PROVISOIRE</option>
+                <select id="form_spectacle" name="nom_spectacle" onchange="quelHeure(this.id,'form_heure')">
+                  <option value=""></option>
+                  <option value="BARBARA, OÙ RÊVENT MES SAISONS?">BARBARA, OÙ RÊVENT MES SAISONS?</option>
+                  <option value="LE CHÂTEAU DE MA MÈRE">LE CHÂTEAU DE MA MÈRE</option>
+                  <option value="FRICASSÉE DE BERNIQUES SUR LIT DE PRÉVERT">FRICASSÉE DE BERNIQUES SUR LIT DE PRÉVERT</option>
+                  <option value="HUGO ES TU LÀ?">HUGO ES TU LÀ?</option>
+                  <option value="LA DEMANDE EN MARIAGE ET L'OURS">LA DEMANDE EN MARIAGE ET L'OURS</option>
+                  <option value="LA GLOIRE DE MON PÈRE">LA GLOIRE DE MON PÈRE</option>
+                  <option value="LA PROMESSE DE L'AUBE">LA PROMESSE DE L'AUBE</option>
+                  <option value="LE MARCHAND DE VENISE">LE MARCHAND DE VENISE</option>
+                  <option value="LE MARIAGE">LE MARIAGE</option>
+                  <option value="LE PROPHÈTE">LE PROPHÈTE</option>
+                  <option value="LE TARTUFFE OU L'IMPOSTEUR">LE TARTUFFE OU L'IMPOSTEUR</option>
+                  <option value="LES CONFESSIONS : LES ANNÉES DE JEUNESSE">LES CONFESSIONS : LES ANNÉES DE JEUNESSE</option>
+                  <option value="LES CONFESSIONS : LES ANNÉES DE MATURITÉ">LES CONFESSIONS : LES ANNÉES DE MATURITÉ</option>
+                  <option value="LES CONFESSIONS : LES ANNÉES DE SAGESSE">LES CONFESSIONS : LES ANNÉES DE SAGESSE</option>
+                  <option value="LES SOLILOQUES DE MARIETTE">LES SOLILOQUES DE MARIETTE</option>
+                  <option value="MADEMOISELLE JULIE">MADEMOISELLE JULIE</option>
+                  <option value="PORT RACINES">PORT RACINES</option>
+                  <option value="TITRE PROVISOIRE">TITRE PROVISOIRE</option>
                 </select>
-                <select class="" name="horaire">
-                  
+                <select id="form_heure" name="horaire" >
+
                 </select>
-                <select class="" name="tarif_spectacle">
+                <select id="form_tarif" name="tarif_spectacle">
                   <option value="">Plein tarif : 15 €</option>
                   <option value="">Tarif réduit (-25 ans) : 10 €</option>
                   <option value="">Tarif enfants : gratuit</option>
