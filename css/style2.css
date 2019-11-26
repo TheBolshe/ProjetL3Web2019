@@ -112,9 +112,9 @@ h1 {
 h2 {
  font-size: 150%;
  font-family: Viner Hand ITC;
- color: #ffffff;
+ color: #000;
  padding-left: 0em;
- text-align: left;
+ text-align: center;
  clear: left;
  }
 
@@ -157,18 +157,18 @@ main{
 
 .decalage{
 /*Décaler le texte pour voir la statue...*/
- padding: 0% 5% 0% 35%;
+	text-align: center;
  font-size: 100%
 }
 /*Decaler le texte pour voir la statue...*/
 .decalage30{
- padding: 0% 5% 0% 30%;
+ text-align: center;
  font-size: 100%
 }
 
-/*reflechir s'il n'y a pas du netoyage à faire ici*/
+/*reflecir s'il n'y a pas du netoyage à faire ici*/
 p{
- color: white ;
+ color: #d7b37d ;
  padding: 0% 5% 0% 10%;
  text-indent: 3 em;
  font-size: 100%;
