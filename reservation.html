@@ -181,14 +181,11 @@
                   <option value="">Tarif réduit (-25 ans) : 10 €</option>
                   <option value="">Tarif enfants : gratuit</option>
                 </select>
+                <input type="number" id="quantity" step="1" min="1" max="" name="quantity" value="1" size="4" pattern="[0-9]*" inputmode="numeric">
                 <button type="submit">Valider</button>
 
               </form>
-              <script>
-                let Form = document.getElementById('form');
-                Form.addEventListener('submit',function(e)){
-
-                }
+              <script src="js/form.js">
               </script>
 
           </section>
