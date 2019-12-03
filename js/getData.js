@@ -1,19 +1,21 @@
 function getData() {
   var fin = {};
-  var prog = new XMLHttpRequest();
-  prog.onreadystatechange = function() {
-    fin.dates = this.responseText;
-
-    var data = new XMLHttpRequest();
-    data.open("POST", "data/donneeSpectacle/tartuffe.json", true);
-    data.onreadystatechange = function() {
-      fin.infos = this.responseText;
-      document.getElementById("main").innerHTML = JSON.stringify(fin);
+  var callDates = $.ajax({
+    type: "POST",
+    url: "php/filtreInfos.php",
+    data: "nom=Le Tartuffe ou l'imposteur",
+    success: function(data) {
+      console.log(data);
+      fin.dates = data;
     }
-    data.send();
-  }
-  prog.open("POST", "php/filtreInfos.php", true);
-  prog.send("nom='Le Tartuffe ou l'imposteur'")
-
-
+  });
+  var callInfos = $.ajax({
+    type: "POST",
+    url: "data/donneeSpectacle/tartuffe.json",
+    success: function(data) {
+      console.log(data);
+      fin.infos = data;
+    }
+  });
+  $.when (callDates, callInfos).done(function() {console.log(fin)});
 }
