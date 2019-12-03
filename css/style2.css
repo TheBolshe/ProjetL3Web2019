@@ -55,15 +55,17 @@ body {
 }
 
 select{
-	width: 100%;
+	margin-left: 25%;
+	margin-right: 25%;
+	width: 50%;
   padding: 12px 20px;
-  margin: 8px 0;
 	border-radius: 1em;
   box-sizing: border-box;
 	border: 2px solid #000;
 	background: #d7b37d;
 	font-family:cursive;
 	font-size: 20px;
+	text-align: center;
 }
 select:hover{
 	background-color: #c7974d ;
@@ -71,7 +73,9 @@ select:hover{
 }
 
 button{
-	width: 100%;
+	margin-left: 25%;
+	margin-right: 25%;
+	width: 50%;
   padding: 12px 20px;
   margin: 8px 0;
 	border-radius: 1em;
@@ -401,15 +405,16 @@ td {
 	color:white;
 	width:12%;
 	border:1px solid white;
-	border-radius:0 0 2em 2em;
+	border-radius:1em;
 	text-align: center;
-	background-color:#305370; /*bronze*/
+	background-color:#d7b37d; /*bronze*/
 	font-family: courrier;
 	font-size:100%;
 	padding: 0px 2px 2px;
 	position: fixed;
 	top: 12%;
 	right:1%;
+	opacity: 80%;
 }
 
 .versLeHaut{
