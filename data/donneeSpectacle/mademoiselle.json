@@ -1,8 +1,7 @@
-' {
-"titre": "MADEMOISELLE JULIE",
-"auteur": "August Strindberg",
-"troupe": "L'Ecume des ours",
-"photographe" : "inconnu",
-"description": "La fête de la Saint Jean bat son plein dans la maison du Comte. Alors qu’il s’est absenté pour la nuit, sa fille, Julie, exaltée par l’alcool et la fête, tente de séduire Jean, le valet de son père et fiancé de Kristin, la cuisinière. Celui-ci, dominé par l’ambition et dont le rêve est d’ouvrir un hôtel en Suisse, saisi cette occasion pour mettre sur pied un plan d’évasion avec Julie et ainsi entamer son ascension sociale, tant désirée depuis l’enfance. Déchirée entre ses rêves et son devoir, entre le mépris que lui inspire Jean et son désir pour lui, Julie ne sait si elle doit fuir ou rester. On assiste alors, dans le secret de la cuisine familiale, à une confrontation passionnée et tragique entre ces deux amants, qui espèrent vainement échapper à leur destin."
+{
+  "titre": "MADEMOISELLE JULIE",
+  "auteur": "August Strindberg",
+  "troupe": "L'Ecume des ours",
+  "photographe": "inconnu",
+  "description": "La fête de la Saint Jean bat son plein dans la maison du Comte. Alors qu’il s’est absenté pour la nuit, sa fille, Julie, exaltée par l’alcool et la fête, tente de séduire Jean, le valet de son père et fiancé de Kristin, la cuisinière. Celui-ci, dominé par l’ambition et dont le rêve est d’ouvrir un hôtel en Suisse, saisi cette occasion pour mettre sur pied un plan d’évasion avec Julie et ainsi entamer son ascension sociale, tant désirée depuis l’enfance. Déchirée entre ses rêves et son devoir, entre le mépris que lui inspire Jean et son désir pour lui, Julie ne sait si elle doit fuir ou rester. On assiste alors, dans le secret de la cuisine familiale, à une confrontation passionnée et tragique entre ces deux amants, qui espèrent vainement échapper à leur destin."
 }
-'
