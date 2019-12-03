@@ -11,7 +11,7 @@ function getData(nom) {
   });
   let callInfos = $.ajax({
     type: "POST",
-    url: "data/donneeSpectacle/tartuffe.json",
+    url: "data/donneeSpectacle/" + nom + ".json",
     success: function(data) {
       //console.log(data);
       fin.infos = data;
@@ -21,4 +21,14 @@ function getData(nom) {
     console.log(fin);
 
   });
+}
+
+function nomjson (nom) {
+  switch (nom) {
+    case expression:
+
+      break;
+    default:
+
+  }
 }
