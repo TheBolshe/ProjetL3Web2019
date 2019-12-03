@@ -1,9 +1,9 @@
-function getData(arg, callback) {
+function getData(nom) {
   let fin = {};
   let callDates = $.ajax({
     type: "POST",
     url: "php/filtreInfos.php",
-    data: "nom=Le Tartuffe ou l'imposteur",
+    data: "nom=" + nom,
     success: function(data) {
       //console.log(data);
       fin.dates = data;
@@ -18,12 +18,7 @@ function getData(arg, callback) {
     }
   });
   $.when(callDates, callInfos).done(function() {
-    //console.log(fin);
-    callback(fin);
+    console.log(fin);
+
   });
-}
-
-
-function printData() {
-  console.log();
 }
