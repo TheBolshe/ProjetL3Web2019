@@ -85,8 +85,8 @@ function getData(nom) {
   });
 }
 
-function getDataName(s1,s2) {
-  var s1 = document.getElementById(s1);
+function getDataName(s1, s2) {
+  let s1 = document.getElementById(s1).value;
   var s2 = document.getElementById(s2);
   let callDates = $.ajax({
     type: "POST",
