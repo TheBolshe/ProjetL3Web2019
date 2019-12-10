@@ -17,14 +17,15 @@ function ready(){
     input.addEventListener('change',quantiteChange);
   }
 
-  var addToPanierButton = document.getElementsByClassName('ajoutpanier');
+  /*var addToPanierButton = document.getElementsByClassName('ajoutpanier');
   for (var i = 0; i < addToPanierButton.length; i++) {
     var button = addToPanierButton[i];
     button.addEventListener('click', addToPanierClick);
   }
+  */
 }
 
-function addToPanierClick(event){
+/*function addToPanierClick(event){
   var button = event.target;
   var shopItem = button.parentElement.parentElement;
   var titre = shopItem.getElementById('form_spectacle')[0].innerText;
@@ -33,7 +34,7 @@ function addToPanierClick(event){
   addToPanier(titre,prix,heure);
 }
 
-fucntion addToPanier(titre,prix,heure){
+function addToPanier(titre,prix,heure){
   var panierColonne = document.createElement('div');
   panierColonne.classList.add('Panier_colonne');
   var panierItem = document.getElementsByClassName('Panier_elements')[0];
@@ -49,6 +50,7 @@ fucntion addToPanier(titre,prix,heure){
   ;
   panierColonne.innerHTML = panierColonneContent;
 }
+*/
 
 function quantiteChange(event){
   var input = event.target;
