@@ -32,6 +32,7 @@ function ready(){
   var prix = shopItem.getElementById('form_tarif')[0].value;
   var heure = shopItem.getElementById('form_heure')[0].innerText;
   addToPanier(titre,prix,heure);
+  updatePrix();
 }
 
 function addToPanier(titre,prix,heure){
@@ -49,6 +50,9 @@ function addToPanier(titre,prix,heure){
     </div>
   ;
   panierColonne.innerHTML = panierColonneContent;
+  panierItem.append('panierColonne');
+  panierColonne.getElementsByClassName('Panier_remove')[0].addEventListener('click',supprimerItem);
+  panierColonne.getElementsByClassName('Panier_quantite_input')[0].addEventListener('change',quantiteChange);
 }
 */
 
