@@ -1,3 +1,4 @@
+{
 if (document.readyState == 'loading') {
   document.addEventListener('DOMContentLoaded', ready);
 }else{
@@ -17,20 +18,19 @@ function ready(){
     input.addEventListener('change',quantiteChange);
   }
 
-  /*var addToPanierButton = document.getElementsByClassName('ajoutpanier');
+  var addToPanierButton = document.getElementsByClassName('ajoutpanier');
   for (var i = 0; i < addToPanierButton.length; i++) {
     var button = addToPanierButton[i];
     button.addEventListener('click', addToPanierClick);
   }
-  */
+
 }
 
-/*function addToPanierClick(event){
+function addToPanierClick(event){
   var button = event.target;
-  var shopItem = button.parentElement.parentElement;
-  var titre = shopItem.getElementById('form_spectacle')[0].innerText;
-  var prix = shopItem.getElementById('form_tarif')[0].value;
-  var heure = shopItem.getElementById('form_heure')[0].innerText;
+  var titre = document.getElementById('form_spectacle')[0].innerText;
+  var prix = document.getElementById('form_tarif')[0].value;
+  var heure = document.getElementById('form_heure')[0].innerText;
   addToPanier(titre,prix,heure);
   updatePrix();
 }
@@ -39,22 +39,16 @@ function addToPanier(titre,prix,heure){
   var panierColonne = document.createElement('div');
   panierColonne.classList.add('Panier_colonne');
   var panierItem = document.getElementsByClassName('Panier_elements')[0];
-  var panierColonneContent =
-    <div class="Panier_billets">
-        <span class="Panier_item_titre">$(titre)</span>
-    </div>
-    <span class="Panier_prix">$(prix)</span>
-    <div class="Panier_quantite">
-        <input class="Panier_quantite_input" type="number" value="1">
-        <button class="Panier_remove" type="button">Supprimer</button>
-    </div>
-  ;
-  panierColonne.innerHTML = panierColonneContent;
+  $.ajax({
+    type : "GET",
+    url : "item.html",
+    sucess : function(data){
+      document.getElemenstByClass('Panier_colonne').innerHTML = data;
+    }
+  });
   panierItem.append('panierColonne');
-  panierColonne.getElementsByClassName('Panier_remove')[0].addEventListener('click',supprimerItem);
-  panierColonne.getElementsByClassName('Panier_quantite_input')[0].addEventListener('change',quantiteChange);
 }
-*/
+
 
 function quantiteChange(event){
   var input = event.target;
@@ -84,4 +78,6 @@ function updatePrix(){
   }
   total = Math.round(total * 100)/100
   document.getElementsByClassName('Panier_total_prix')[0].innerText = total + '€';
+}
+
 }
