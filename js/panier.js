@@ -6,20 +6,11 @@ if (document.readyState == 'loading') {
 }
 
 function ready(){
-  var supprimerElement = document.getElementsByClassName('Panier_remove');
-  for (var i = 0; i < supprimerElement.length; i++) {
-    var button = supprimerElement[i];
-    button.addEventListener('click',supprimerItem);
-  }
-
   var quantiteInput = document.getElementsByClassName('Panier_quantite_input');
   for (var i = 0; i < quantiteInput.length; i++) {
     var input = quantiteInput[i];
     input.addEventListener('change',quantiteChange);
   }
-
-
-
 }
 
 function addToPanierClick(){
@@ -55,8 +46,7 @@ function quantiteChange(event){
   updatePrix();
 }
 
-function supprimerItem(event){
-  var buttonClicked = event.target || event.srcElement;
+function supprimerItem(){
   buttonClicked.parentElement.parentElement.remove();
   updatePrix();
 }
