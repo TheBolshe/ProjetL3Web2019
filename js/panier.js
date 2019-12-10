@@ -18,16 +18,12 @@ function ready(){
     input.addEventListener('change',quantiteChange);
   }
 
-  var addToPanierButton = document.getElementsByClassName('ajoutpanier');
-  for (var i = 0; i < addToPanierButton.length; i++) {
-    var button = addToPanierButton[i];
-    button.addEventListener('click', addToPanierClick);
-  }
+
 
 }
 
-function addToPanierClick(event){
-  var button = event.target;
+function addToPanierClick(){
+  console.log("bite");
   var titre = document.getElementById('form_spectacle')[0].innerText;
   var prix = document.getElementById('form_tarif')[0].value;
   var heure = document.getElementById('form_heure')[0].innerText;
@@ -38,15 +34,16 @@ function addToPanierClick(event){
 function addToPanier(titre,prix,heure){
   var panierColonne = document.createElement('div');
   panierColonne.classList.add('Panier_colonne');
-  var panierItem = document.getElementsByClassName('Panier_elements')[0];
+  //var panierItem = document.getElementsByClassName('Panier_elements')[0];
   $.ajax({
     type : "GET",
     url : "item.html",
     sucess : function(data){
       document.getElemenstByClass('Panier_colonne').innerHTML = data;
+      updatePrix();
     }
   });
-  panierItem.append('panierColonne');
+  //panierItem.append('panierColonne');
 }
 
 
