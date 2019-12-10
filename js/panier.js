@@ -31,6 +31,8 @@ function addToPanier(titre,prix,heure){
     url : "item.html",
     sucess : function(data){
       document.getElemenstByClass('Panier_colonne').innerHTML = data;
+      document.getElemenstByClass('Panier_item_titre')[0].innerHTML = titre;
+      document.getElemenstByClass('Panier_prix')[0].innerHTML = prix;
       updatePrix();
     }
   });
