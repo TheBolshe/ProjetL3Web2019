@@ -1,3 +1,20 @@
+getDataStats();
+
+async function getDataStats(){
+  const response = await fetch('data/ResultatsFestival.csv');
+  const data = await response.text();
+
+  const rows = data.split('\n').slice(1);
+  rows.forEach(elt =>{
+    const row = elt.split(',');
+    const sj = row[9];
+    const sa = row[10];
+    const e = row[11];
+    console.log(sj,sa,e);
+  })
+
+}
+
 let ctx = document.getElementById('canvas').getContext('2d');
 
 Chart.defaults.scale.ticks.beginAtZero = true;
