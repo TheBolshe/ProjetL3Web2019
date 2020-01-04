@@ -1,3 +1,7 @@
+const ysj =[];
+const ysa= [];
+const ye = [];
+
 getDataStats();
 
 async function getDataStats(){
@@ -5,15 +9,19 @@ async function getDataStats(){
   const data = await response.text();
 
   const rows = data.split('\n').slice(1);
-  rows.forEach(elt =>{
-    const row = elt.split(',');
+  rows.forEach(row =>{
+    const column = row.split(',');
     const sj = row[9];
+    ysj.push(sj);
     const sa = row[10];
+    ysa.push(sa);
     const e = row[11];
+    ye.push(e);
     console.log(sj,sa,e);
   })
 
 }
+
 
 let ctx = document.getElementById('canvas').getContext('2d');
 
@@ -26,15 +34,15 @@ let barChart = new Chart(ctx,{
     datasets : [
       {
         label : 'Tarif Enfant',
-        data : [10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        data : ye,
         backgroundColor : 'blue',
       },{
         label : 'Tarif Jeune',
-        data : [10,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        data : ysj,
         backgroundColor : 'green',
       },{
         label : 'Tarif Adult',
-        data : [10,10,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        data : ysa,
         backgroundColor : 'yellow',
       }
     ]
