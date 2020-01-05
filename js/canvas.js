@@ -2,9 +2,11 @@ const ysj =[];
 const ysa= [];
 const ye = [];
 
-getDataStats();
+//getDataStats();
 
-async function getDataStats(){
+//version serveur + API
+
+/*async function getDataStats(){
   const response = await fetch('data/ResultatsFestival.csv');
   const data = await response.text();
 
@@ -20,8 +22,22 @@ async function getDataStats(){
     console.log(sj,sa,e);
   })
 
-}
+}*/
 
+getDataStatsbis();
+
+function getDataStatsbis(){
+  let callStats = $.ajax({
+    type : "POST",
+    url : "php/filtreQuandOu.php",
+    data : ,
+    success : function(data){
+      ye = data.E;
+      ysj = data.SJ;
+      ysa = data.SA;
+    }
+  });
+}
 
 let ctx = document.getElementById('canvas').getContext('2d');
 

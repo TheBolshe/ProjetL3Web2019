@@ -5,6 +5,9 @@
     public $Heure = [];
     public $Lieu = [];
     public $Village = [];
+    public $SJ = [];
+    public $SA = [];
+    public $E = [];
   }
   $nom =  $_POST['nom'];
   //$nom = "Le Tartuffe ou l'imposteur";
@@ -17,6 +20,9 @@
       array_push($data -> Heure, $csv[$i][1]);
       array_push($data -> Lieu, $csv[$i][3]);
       array_push($data -> Village, $csv[$i][4]);
+      array_push($data -> SJ , $csv[$i][9]);
+      array_push($data -> SA , $csv[$i][10]);
+      array_push($data -> E , $csv[$i][11]);
     }
   }
 
