@@ -1,6 +1,7 @@
-const ysj =[];
+/*const ysj =[];
 const ysa= [];
 const ye = [];
+*/
 
 //getDataStats();
 
@@ -24,8 +25,6 @@ const ye = [];
 
 }*/
 
-getDataStatsbis();
-
 function getDataStatsbis(){
   let callStats = $.ajax({
     type : "POST",
@@ -41,7 +40,7 @@ function affiche(donnee){
   ye = donnee.E;
   ysj = donnee.SJ;
   ysa = donnee.SA;
-  
+  console.log(donnee);
   let ctx = document.getElementById('canvas').getContext('2d');
 
   Chart.defaults.scale.ticks.beginAtZero = true;
@@ -74,3 +73,6 @@ function affiche(donnee){
     }
   });
 }
+
+console.log("c");
+getDataStatsbis();

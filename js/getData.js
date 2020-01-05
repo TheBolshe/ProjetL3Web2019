@@ -60,6 +60,7 @@ function nomjson(nom) {
   }
 }
 
+
 function getData(nom) {
   let fin = {};
   let callDates = $.ajax({
