@@ -28,7 +28,7 @@ const ye = [];
 function getDataStatsbis(){
   $.ajax({
     type : "GET",
-    url : "php/filtreQuandOu.php",
+    url : "php/filtrePlaces.php",
     success : function(data){
       affiche(data);
       console.log("cc");
