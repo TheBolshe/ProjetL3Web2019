@@ -32,6 +32,7 @@ function getDataStatsbis(){
     url : "php/filtreQuandOu.php",
     success : function(data){
       affiche(data)
+      console.log("cc");
     }
   });
 }
