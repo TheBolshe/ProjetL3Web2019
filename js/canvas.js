@@ -26,11 +26,11 @@ const ye = [];
 }*/
 
 function getDataStatsbis(){
-  let callStats = $.ajax({
-    type : "POST",
+  $.ajax({
+    type : "GET",
     url : "php/filtreQuandOu.php",
     success : function(data){
-      affiche(data)
+      affiche(data);
       console.log("cc");
     }
   });
