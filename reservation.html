@@ -181,7 +181,6 @@
           </select>
           Horaires
           <select id="form_heure" name="horaire">
-            <option>10H</option>
           </select>
           Tarifs
           <select id="form_tarif" name="tarif_spectacle">
@@ -199,30 +198,30 @@
       </section>
 
       <section class="Panier_total">
-            <h2 class="section-header">Panier</h2>
-            <div class="Panier_colonne">
-                <span class="Panier_billets_titre">Billets</span>
-                <span class="Panier_prix_titre">Prix</span>
-                <span class="Panier_quantite_titre">Quantité</span>
+        <h2 class="section-header">Panier</h2>
+        <div class="Panier_colonne">
+          <span class="Panier_billets_titre">Billets</span>
+          <span class="Panier_prix_titre">Prix</span>
+          <span class="Panier_quantite_titre">Quantité</span>
+        </div>
+        <div class="Panier_elements">
+          <div class="Panier_colonne">
+            <div class="Panier_billets">
+              <span class="Panier_item_titre">T-Shirt</span>
             </div>
-            <div class="Panier_elements">
-                <div class="Panier_colonne">
-                    <div class="Panier_billets">
-                        <span class="Panier_item_titre">T-Shirt</span>
-                    </div>
-                    <span class="Panier_prix">19.99€</span>
-                    <div class="Panier_quantite">
-                        <input class="Panier_quantite_input" type="number" value="1">
-                        <button class="Panier_remove" type="button" onclick="supprimerItem()">Supprimer</button>
-                    </div>
-                </div>
+            <span class="Panier_prix">19.99€</span>
+            <div class="Panier_quantite">
+              <input class="Panier_quantite_input" type="number" value="1">
+              <button class="Panier_remove" type="button" onclick="supprimerItem()">Supprimer</button>
             </div>
-            <div class="cart-total">
-                <strong class="cart-total-title">Total</strong>
-                <span class="Panier_total_prix">19.99€</span>
-            </div>
-            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
-        </section>
+          </div>
+        </div>
+        <div class="cart-total">
+          <strong class="cart-total-title">Total</strong>
+          <span class="Panier_total_prix">19.99€</span>
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+      </section>
 
 
 

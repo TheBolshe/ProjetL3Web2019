@@ -90,7 +90,7 @@ function getDataName(s1,s2) {
   var s2 = document.getElementById(s2);
   let callDates = $.ajax({
     type: "POST",
-    url: "php/filtreInfos.php",
+    url: "php/filtreQuandOu.php",
     data: "nom=" + s1,
     success: function(data) {
       s2.innerHTML = "";

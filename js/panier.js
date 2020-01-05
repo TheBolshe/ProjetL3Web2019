@@ -14,29 +14,29 @@ function ready(){
 }
 
 function addToPanierClick(){
-  console.log("bite");
-  var titre = document.getElementById('form_spectacle')[0].innerText;
-  var prix = document.getElementById('form_tarif')[0].value;
-  var heure = document.getElementById('form_heure')[0].innerText;
+  var titre = document.getElementById('form_spectacle').value;
+  var prix = document.getElementById('form_tarif').value;
+  var heure = document.getElementById('form_heure').value;
   addToPanier(titre,prix,heure);
-  updatePrix();
+  //updatePrix();
 }
 
 function addToPanier(titre,prix,heure){
   var panierColonne = document.createElement('div');
   panierColonne.classList.add('Panier_colonne');
-  //var panierItem = document.getElementsByClassName('Panier_elements')[0];
+  var panierItem = document.getElementsByClassName('Panier_elements')[0];
   $.ajax({
     type : "GET",
     url : "item.html",
-    sucess : function(data){
-      document.getElemenstByClass('Panier_colonne').innerHTML = data;
-      document.getElemenstByClass('Panier_item_titre')[0].innerHTML = titre;
-      document.getElemenstByClass('Panier_prix')[0].innerHTML = prix;
+    success : function(data){
+      document.getElementsByClassName("Panier_total").innerHTML += panierColonne;
+      document.getElementsByClassName('Panier_colonne').innerHTML = data;
+      document.getElementsByClassName('Panier_item_titre')[0].innerHTML = titre;
+      document.getElementsByClassName('Panier_prix')[0].innerHTML = prix;
       updatePrix();
     }
   });
-  //panierItem.append('panierColonne');
+  panierItem.append('panierColonne');
 }
 
 
