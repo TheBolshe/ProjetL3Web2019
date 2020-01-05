@@ -12,5 +12,5 @@
     $list[E][] = $csv[$i][11];
   }
 
-  echo json_encode($data);
+  echo json_encode($list);
  ?>
