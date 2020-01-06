@@ -5,7 +5,7 @@ const ye = [];
 
 //getDataStats();
 
-//version serveur + API
+//version serveur + API (abandonné rapidement)
 
 /*async function getDataStats(){
   const response = await fetch('data/ResultatsFestival.csv');
@@ -25,6 +25,7 @@ const ye = [];
 
 }*/
 
+// Récupère les donneeés des billets sur le serveur et appelle la fonction qui affiche les données sous forme de graphique
 
 function getDataStatsbis(){
   $.ajax({
@@ -35,6 +36,8 @@ function getDataStatsbis(){
     }
   });
 }
+
+// Récupère les donneeés des billets sur le serveur et appelle la fonction qui affiche les données sous forme de graphique
 
 function getDataStatster(){
   $.ajax({
@@ -97,7 +100,7 @@ function affichePrix(donnee){
           data : yr,
           backgroundColor : 'orange',
         },{
-          label : 'Tarif Adult',
+          label : 'Tarif Adulte',
           data : yp,
           backgroundColor : 'yellow',
         },{
@@ -165,11 +168,11 @@ function affiche(donnee){
           data : ysj,
           backgroundColor : 'green',
         },{
-          label : 'Tarif Adult',
+          label : 'Tarif Adulte',
           data : yp,
           backgroundColor : '#D0D814',
         },{
-          label : 'Spécial Adut',
+          label : 'Spécial Adute',
           data : ysa,
           backgroundColor : 'yellow',
         },{
