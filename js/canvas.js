@@ -3,28 +3,6 @@ const ysa= [];
 const ye = [];
 */
 
-//getDataStats();
-
-//version serveur + API (abandonné rapidement)
-
-/*async function getDataStats(){
-  const response = await fetch('data/ResultatsFestival.csv');
-  const data = await response.text();
-
-  const rows = data.split('\n').slice(1);
-  rows.forEach(row =>{
-    const column = row.split(',');
-    const sj = row[9];
-    ysj.push(sj);
-    const sa = row[10];
-    ysa.push(sa);
-    const e = row[11];
-    ye.push(e);
-    console.log(sj,sa,e);
-  })
-
-}*/
-
 // Récupère les donneeés des billets sur le serveur et appelle la fonction qui affiche les données sous forme de graphique
 
 function getDataStatsbis(){
