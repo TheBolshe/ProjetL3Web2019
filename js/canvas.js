@@ -26,11 +26,11 @@ const ye = [];
 }*/
 
 function getDataStatsbis(){
-  $.ajax({
-    type : "GET",
-    url : "php/filtrePlaces.php",
+  let callStats = $.ajax({
+    type : "POST",
+    url : "php/filtreQuandOu.php",
     success : function(data){
-      affiche(data);
+      affiche(data)
       console.log("cc");
     }
   });
@@ -40,6 +40,12 @@ function affiche(donnee){
   ye = donnee.E;
   ysj = donnee.SJ;
   ysa = donnee.SA;
+<<<<<<< HEAD
+=======
+
+  // dessin du grqph via chartjs
+
+>>>>>>> 9c5d72bc00f4cb8a4420864c64ca11910afc7b10
   let ctx = document.getElementById('canvas').getContext('2d');
 
   Chart.defaults.scale.ticks.beginAtZero = true;
