@@ -1,7 +1,7 @@
 function listeSpectacles() {
   $.ajax({
     type: "GET",
-    url: "php/getSpectacles.php",
+    url: "php/getTitreSpectacle.php",
     success: function(data) {
       constrListe(data);
     }
@@ -21,7 +21,7 @@ function constrListeOLD(liste) {
 
 function afficheSpectacle(nom) {
   console.log(nom);
-  let callInfos = $.ajax({
+  $.ajax({
     type: "GET",
     url: "data/donneeSpectacle/" + nom.replace(/[^a-z]/gi, '') + ".json",
     success: function(data) {
@@ -32,6 +32,7 @@ function afficheSpectacle(nom) {
 
 function constrSpectacle(donnees) {
   var div = document.getElementById("spectacle");
+  console.log(div);
   var contenu = "<h2>\n<titrespectacle>" + donnees.titre + "</titrespectacle>, ";
   contenu += "d'après <auteur>" + donnees.auteur + "</auteur>, ";
   contenu += "par <troupe> " + donnees.troupe + "</troupe>\n</h2>\n";
@@ -42,22 +43,28 @@ function constrSpectacle(donnees) {
   div.innerHTML = contenu;
 }
 
-function constrListe(tableau) {
+function constrListe(liste) {
   var ul = document.createElement("ul");
-  for (let i in tableau) {
+  ul.id = "selection";
+  for (let i in liste) {
     var li = document.createElement("li");
     //var nom = document.createTextNode(tableau[i]);
     var button = document.createElement("input");
     button.type = "button";
-    button.value = tableau[i];
-    button.onclick = function () {
-      afficheSpectacle (tableau[i]);
+    button.value = liste[i];
+    button.onclick = function() {
+      afficheSpectacle (liste[i]);
     }
     li.appendChild(button);
     ul.appendChild(li);
   }
   //console.log(liste);
-  document.body.insertBefore(ul, document.body.childNodes[0]);
+  //document.body.insertBefore(ul, document.body.childNodes[0]);
+  if (document.getElementById("selection")){
+    document.getElementById("selection").remove();
+    console.log("toto")
+  }else {
+    console.log("tata")
+  }
+  document.getElementsByClassName("menu")[0].appendChild(ul);
 }
-
-listeSpectacles();
