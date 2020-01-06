@@ -192,15 +192,9 @@ function affiche(donnee){
 }
 
 function exe1(){
-  document.getElementById('canvas').remove();
-  var canvas = document.createElement('canvas');
-  canvas.id = 'canvas';
   getDataStatsbis();
 }
 
 function exe2(){
-  document.getElementById('canvas').remove();
-  var canvas = document.createElement('canvas');
-  canvas.id = 'canvas';
   getDataStatster();
 }
