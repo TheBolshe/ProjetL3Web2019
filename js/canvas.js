@@ -32,10 +32,20 @@ function getDataStatsbis(){
     url : "php/filtrePlaces.php",
     success : function(data){
       affiche(data);
-      //affichePrix(data);
     }
   });
 }
+
+function getDataStatster(){
+  $.ajax({
+    type : "GET",
+    url : "php/filtrePlaces.php",
+    success : function(data){
+      affichePrix(data);
+    }
+  });
+}
+
 
 function affichePrix(donnee){
   yo = donnee.O;
@@ -180,4 +190,13 @@ function affiche(donnee){
     }
   });
 }
-getDataStatsbis();
+
+function exe1(){
+  location.reload();
+  getDataStatsbis();
+}
+
+function exe2(){
+  location.reload();
+  getDataStatster();
+}
