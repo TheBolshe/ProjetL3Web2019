@@ -107,7 +107,7 @@ function affichePrix(donnee){
           label : 'Reçettes',
           data : res,
           backgroundColor : 'green',
-        },{
+          },{
           label : 'Dépenses',
           data : dep,
           backgroundColor : 'red',
