@@ -192,9 +192,17 @@ function affiche(donnee){
 }
 
 function exe1(){
+  document.getElementById('canvas').remove();
+  var g = document.createElement('canvas');
+  g.id = 'canvas';
+  document.getElementsByClassName('decalage')[0].appendChild(g);
   getDataStatsbis();
 }
 
 function exe2(){
+  document.getElementById('canvas').remove();
+  var g = document.createElement('canvas');
+  g.id = 'canvas';
+  document.getElementsByClassName('decalage')[0].appendChild(g);
   getDataStatster();
 }
