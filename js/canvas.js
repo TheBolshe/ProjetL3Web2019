@@ -32,8 +32,6 @@ function getDataStatsbis(){
     url : "php/filtrePlaces.php",
     success : function(data){
       affiche(data);
-<<<<<<< HEAD
-=======
     }
   });
 }
@@ -121,7 +119,6 @@ function affichePrix(donnee){
         xAxes: [{ stacked: true }],
         yAxes: [{ stacked: true }]
       }
->>>>>>> 5d0f6ab85eaf25e6307cb599740e3d9b552a9510
     }
   });
 }
