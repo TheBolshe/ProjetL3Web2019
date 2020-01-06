@@ -32,7 +32,6 @@ function getDataStatsbis(){
     url : "php/filtrePlaces.php",
     success : function(data){
       affiche(data);
-      console.log("cc");
     }
   });
 }
