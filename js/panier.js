@@ -1,3 +1,34 @@
+function addToPanier(billet) {
+  $.ajax({
+    type: "POST",
+    url: "php/addToPanier.php",
+    data: "billet=" billet,
+    success : function(data){
+    }
+  });
+}
+
+function affichePanier(panier) {
+  var panierDom = document.createElement("ul");
+  for (let element in panier) {
+    var billetDom = constrBillet(element);
+    panierDom.appendChild(billetDom)
+  }
+}
+
+function constrBillet (billet) {
+  var billetDom = document.createElement("ul");
+  var detail = document.createElement("li");
+  var nombre = document.createElement("li");
+  var texteDetail = document.createTextNode(billet.detail.nom + ", " billet.detail.jour + ", " + billet.detail.heure + " à " + billet.detail.village);
+  var texteNombre = document.createTextNode(billet.nombre);
+  detail.appendChild(texteDetail);
+  nombre.appendChild(texteNombre);
+  billetDom.appendChild(detail);
+  billetDom.appendChild(nombre);
+  return billetDom;
+}
+
 {
 if (document.readyState == 'loading') {
   document.addEventListener('DOMContentLoaded', ready);
@@ -20,6 +51,8 @@ function addToPanierClick(){
   addToPanier(titre,prix,heure);
   //updatePrix();
 }
+
+
 
 function addToPanier(titre,prix,heure){
   var panierColonne = document.createElement('div');
