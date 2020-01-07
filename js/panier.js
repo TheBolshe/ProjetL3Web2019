@@ -37,6 +37,12 @@ if (document.readyState == 'loading') {
 }
 
 function ready(){
+  var removeCartItemButtons = document.getElementsByClassName('Panier_remove');
+  for (var i = 0; i < removeCartItemButtons.length; i++) {
+      var button = removeCartItemButtons[i];
+      button.addEventListener('click', supprimerItem);
+  }
+
   var quantiteInput = document.getElementsByClassName('Panier_quantite_input');
   for (var i = 0; i < quantiteInput.length; i++) {
     var input = quantiteInput[i];
@@ -81,8 +87,9 @@ function quantiteChange(event){
   updatePrix();
 }
 
-function supprimerItem(){
-  buttonClicked.parentElement.parentElement.remove();
+function supprimerItem(event){
+  var button = event.target;
+  button.parentElement.parentElement.remove();
   updatePrix();
 }
 
