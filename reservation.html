@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr" dir="ltr">
 
 <head>
-  <title>Théâtres de Bourbon</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta charset="utf-8">
   <link rel="stylesheet" href="css/style2.css">
-  <script src="js/panier.js"></script>
+  <title>Théâtres de Bourbon : réservation</title>
 </head>
 
 <body>
@@ -40,7 +39,7 @@
 
     <table></table>
   </div>
-
+  <button type="button" name="test" onclick="test()"></button>
   <div class="decalage">
     <section>
       <!-- Présentation des tarifs -->
@@ -158,13 +157,11 @@
         <h1 id="label_reservation">Réservation de tickets</h1>
         <form class="formulaire_resa" action="formulaire.php" method="post" id="form">
           Spectacles
-          <select id="form_spectacle" name="nom_spectacle" onchange="getDataName(this.id,'form_heure')">
-            <option value=""></option>
-            
-          </select>
+          <select id="form_spectacle" name="nom_spectacle" onchange="getDataName(this.id,'form_jour')"></select>
+          Jours
+          <select id="form_jour" name="jour"></select>
           Horaires
-          <select id="form_heure" name="horaire">
-          </select>
+          <select id="form_heure" name="horaire"></select>
           Tarifs
           <select id="form_tarif" name="tarif_spectacle">
             <option value=""></option>
@@ -173,9 +170,8 @@
             <option value="0€">Tarif enfants : gratuit</option>
           </select>
           <input type="number" id="quantity" step="1" min="1" max="" name="quantity" value="1" size="4" pattern="[0-9]*" inputmode="numeric">
-          <button type="button" class="ajoutpanier" onclick="addToPanierClick()">Ajouter au panier</button>
+          <button type="button" class="ajoutpanier" onclick="addToPanier()">Ajouter au panier</button>
         </form>
-        <script src="js/form.js"></script>
       </section>
 
       <section class="Panier_total">

@@ -1,3 +1,9 @@
+var billetId = 1;
+
+function test() {
+  $.get("php/destroySession.php");
+}
+
 function initListeSpectacles() {
   $.ajax({
     type: "GET",
@@ -19,12 +25,27 @@ function addValues(liste) {
   }
 }
 
-function addToPanier(billet) {
+
+function creationBilletPanier() {
+  var billet = {};
+  billet.id = billetId++;
+  billet.detail = {};
+  billet.detail.nom = document.getElementById("form_spectacle").value;
+  billet.detail.jour = document.getElementById("form_jour").value;
+  billet.detail.heure = document.getElementById("form_heure").value;
+  billet.type = document.getElementById("form_tarif").value;
+  billet.nombre = document.getElementById("quantity").value;
+  return billet;
+}
+
+function addToPanier() {
   $.ajax({
     type: "POST",
     url: "php/addToPanier.php",
-    data: "billet=" + billet,
-    success: function(data) {}
+    data: "billet=" + JSON.stringify(creationBilletPanier()),
+    success: function() {
+      $.get("php/sessionVar.php");
+    }
   });
 }
 
@@ -38,13 +59,18 @@ function affichePanier(panier) {
 
 function constrBillet(billet) {
   var billetDom = document.createElement("ul");
+  billetDom.id = billet.id;
   var detail = document.createElement("li");
+  var type = document.createElement("li");
   var nombre = document.createElement("li");
-  var texteDetail = document.createTextNode(billet.detail.nom + ", " + billet.detail.jour + ", " + billet.detail.heure + " à " + billet.detail.village);
+  var texteDetail = document.createTextNode(billet.detail.nom + ", " + billet.detail.jour + ", " + billet.detail.heure);
+  var texteType = document.createTextNode(billet.type);
   var texteNombre = document.createTextNode(billet.nombre);
   detail.appendChild(texteDetail);
+  type.appendChild(texteType);
   nombre.appendChild(texteNombre);
   billetDom.appendChild(detail);
+  billetDom.appendChild(type);
   billetDom.appendChild(nombre);
   return billetDom;
 }
