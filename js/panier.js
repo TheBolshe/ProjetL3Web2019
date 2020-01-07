@@ -1,10 +1,30 @@
+function initListeSpectacles() {
+  $.ajax({
+    type: "GET",
+    url: "php/getTitreSpectacle.php",
+    success: function(data) {
+      addValues(data);
+    }
+  });
+}
+
+function addValues(liste) {
+  var form = document.getElementById("form_spectacle");
+  for (let i in liste) {
+    var option = document.createElement("option");
+    var text = document.createTextNode(liste[i]);
+    option.appendChild(text);
+    option.value = liste[i];
+    form.appendChild(option);
+  }
+}
+
 function addToPanier(billet) {
   $.ajax({
     type: "POST",
     url: "php/addToPanier.php",
-    data: "billet=" billet,
-    success : function(data){
-    }
+    data: "billet=" + billet,
+    success: function(data) {}
   });
 }
 
@@ -12,15 +32,15 @@ function affichePanier(panier) {
   var panierDom = document.createElement("ul");
   for (let element in panier) {
     var billetDom = constrBillet(element);
-    panierDom.appendChild(billetDom)
+    panierDom.appendChild(billetDom);
   }
 }
 
-function constrBillet (billet) {
+function constrBillet(billet) {
   var billetDom = document.createElement("ul");
   var detail = document.createElement("li");
   var nombre = document.createElement("li");
-  var texteDetail = document.createTextNode(billet.detail.nom + ", " billet.detail.jour + ", " + billet.detail.heure + " à " + billet.detail.village);
+  var texteDetail = document.createTextNode(billet.detail.nom + ", " + billet.detail.jour + ", " + billet.detail.heure + " à " + billet.detail.village);
   var texteNombre = document.createTextNode(billet.nombre);
   detail.appendChild(texteDetail);
   nombre.appendChild(texteNombre);
@@ -29,13 +49,17 @@ function constrBillet (billet) {
   return billetDom;
 }
 
-{
 if (document.readyState == 'loading') {
   document.addEventListener('DOMContentLoaded', ready);
-}else{
+} else {
   ready();
 }
 
+function ready() {
+  initListeSpectacles();
+}
+
+/*
 function ready(){
   var removeCartItemButtons = document.getElementsByClassName('Panier_remove');
   for (var i = 0; i < removeCartItemButtons.length; i++) {
@@ -110,3 +134,4 @@ function updatePrix(){
 }
 
 }
+*/
