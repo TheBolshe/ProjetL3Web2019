@@ -1,7 +1,8 @@
-var billetId = 1;
+var billetId = 100;
 
 function test() {
-  $.get("php/destroySession.php");
+  //$.get("php/destroySession.php");
+  $.get("php/getDureeVilles.php", {ville1: "Moulins", ville2: "Vichy"});
 }
 
 function initListeSpectacles() {
@@ -39,12 +40,17 @@ function creationBilletPanier() {
 }
 
 function addToPanier() {
+  var billet = JSON.stringify(creationBilletPanier());
+  //console.log(billet);
   $.ajax({
     type: "POST",
     url: "php/addToPanier.php",
-    data: "billet=" + JSON.stringify(creationBilletPanier()),
+    data: "billet=" + billet,
     success: function() {
-      $.get("php/sessionVar.php");
+      $.get("php/sessionVar.php", function(data) {
+        console.log(data);
+        affichePanier(data);
+      });
     }
   });
 }
@@ -52,9 +58,11 @@ function addToPanier() {
 function affichePanier(panier) {
   var panierDom = document.createElement("ul");
   for (let element in panier) {
-    var billetDom = constrBillet(element);
+    //console.log(panier[element]);
+    var billetDom = constrBillet(panier[element]);
     panierDom.appendChild(billetDom);
   }
+  document.getElementById("panier").appendChild(panierDom);
 }
 
 function constrBillet(billet) {

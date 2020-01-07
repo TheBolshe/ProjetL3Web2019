@@ -155,13 +155,19 @@
       <section>
         <!-- Réservation de tickets -->
         <h1 id="label_reservation">Réservation de tickets</h1>
-        <form class="formulaire_resa" action="formulaire.php" method="post" id="form">
+        <form class="formulaire_resa" id="form">
           Spectacles
-          <select id="form_spectacle" name="nom_spectacle" onchange="getDataName(this.id,'form_jour')"></select>
+          <select id="form_spectacle" name="nom_spectacle" onchange="getDataName(this.id,'form_jour')">
+            <option value=""></option>
+          </select>
           Jours
-          <select id="form_jour" name="jour"></select>
+          <select id="form_jour" name="jour">
+            <option value=""></option>
+          </select>
           Horaires
-          <select id="form_heure" name="horaire"></select>
+          <select id="form_heure" name="horaire">
+            <option value=""></option>
+          </select>
           Tarifs
           <select id="form_tarif" name="tarif_spectacle">
             <option value=""></option>
@@ -174,7 +180,7 @@
         </form>
       </section>
 
-      <section class="Panier_total">
+      <section id="panier">
         <h2 class="section-header">Panier</h2>
         <div class="Panier_colonne">
           <span class="Panier_billets_titre">Billets</span>
