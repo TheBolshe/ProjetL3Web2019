@@ -1,4 +1,4 @@
-function nomjson(nom) {
+/*function nomjson(nom) {
   console.log(nom);
   switch (nom) {
     case "Barbara, où rêvent mes saisons":
@@ -84,25 +84,4 @@ function getData(nom) {
     console.log(fin);
 
   });
-}
-
-function getDataName(s1,s2) {
-  var s1 = document.getElementById(s1).value;
-  var s2 = document.getElementById(s2);
-  let callDates = $.ajax({
-    type: "POST",
-    url: "php/filtreQuandOu.php",
-    data: "nom=" + s1,
-    success: function(data) {
-      s2.innerHTML = "";
-      var optionArray = data.jour;
-      for (var option in optionArray) {
-        var newOption = document.createElement("option");
-        newOption.innerHTML = optionArray[option];
-        s2.options.add(newOption);
-      }
-    }
-  });
-
-
-}
+}*/

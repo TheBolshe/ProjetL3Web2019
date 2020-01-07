@@ -157,11 +157,11 @@
         <h1 id="label_reservation">Réservation de tickets</h1>
         <form class="formulaire_resa" id="form">
           Spectacles
-          <select id="form_spectacle" name="nom_spectacle" onchange="getDataName(this.id,'form_jour')">
+          <select id="form_spectacle" name="nom_spectacle" onchange="getJours(this.id,'form_jour')">
             <option value=""></option>
           </select>
           Jours
-          <select id="form_jour" name="jour">
+          <select id="form_jour" name="jour" onchange="getHeures()">
             <option value=""></option>
           </select>
           Horaires
