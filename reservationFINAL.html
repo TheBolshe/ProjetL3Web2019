@@ -39,7 +39,7 @@
 
     <table></table>
   </div>
-  <button type="button" name="test" onclick="test()"></button>
+  <!--<button type="button" name="test" onclick="test()"></button>-->
   <div class="decalage">
     <section>
       <!-- Présentation des tarifs -->
@@ -161,7 +161,7 @@
             <option value=""></option>
           </select>
           Jours
-          <select id="form_jour" name="jour" onchange="getHeures()">
+          <select id="form_jour" name="jour" onchange="getHeures(this.id, )">
             <option value=""></option>
           </select>
           Horaires
@@ -181,29 +181,7 @@
       </section>
 
       <section id="panier">
-        <h2 class="section-header">Panier</h2>
-        <div class="Panier_colonne">
-          <span class="Panier_billets_titre">Billets</span>
-          <span class="Panier_prix_titre">Prix</span>
-          <span class="Panier_quantite_titre">Quantité</span>
-        </div>
-        <div class="Panier_elements">
-          <div class="Panier_colonne">
-            <div class="Panier_billets">
-              <span class="Panier_item_titre">Le mariage</span>
-            </div>
-            <span class="Panier_prix">10€</span>
-            <div class="Panier_quantite">
-              <input class="Panier_quantite_input" type="number" value="1">
-              <button class="Panier_remove" type="button" onclick="supprimerItem()">Supprimer</button>
-            </div>
-          </div>
-        </div>
-        <div class="cart-total">
-          <strong class="cart-total-title">Total</strong>
-          <span class="Panier_total_prix">0€</span>
-        </div>
-        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+
       </section>
 
 
@@ -282,7 +260,6 @@
 
   </div>
   <script src="js/panier.js"></script>
-  <script src="js/getData.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
 

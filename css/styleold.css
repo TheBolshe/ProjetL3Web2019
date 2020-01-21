@@ -1,4 +1,4 @@
-﻿/******************************** Feuille de Style *********************************/
+/******************************** Feuille de Style *********************************/
 /* anciennes couleurs:   	fond bleu trop foncé: #016bc3 /*bleu un peu foncé*//*
 				caractères initiaux vert clair: #b9e398 *vert clair *//*
 				fond bleu trop clair: #27a0e7 *bleu un clair*//*
@@ -11,10 +11,10 @@
 				autreVert: #b7cf53;
 				vert flyerPierre: #B5CD51;
 				rose: #CC3333;
-*/ 
+*/
 /*nouvelles couleurs: ;
 	fond vert criard:#b9e398 *vert clair */
-*/ 
+*/
 
 
 html, body {
@@ -25,15 +25,15 @@ html {
     height: 100%;
 }
 body {
-		color:black;		
-		background-color: #FFF; 
-		font-family:  Viner Hand ITC 
+		color:white;
+		background-color: #B5CD51;
+		font-family:  Vijaya, Garamond, sans-serif;
 		font-size: 100%;
-		/*background-image:url(images/peleMele.jpg);*/
+		background-image:url(images/peleMele.jpg);
 		background-size: 100%;
 		background-repeat: repeat;
  }
- 
+
 .riquiqui{
 	font-size:60%;
 	/*width:70%;*/
@@ -43,18 +43,14 @@ body {
 .bandeau {
     position: fixed;
     top: 0%;
-	padding-top:-1px;
-	margin-top:-7px;
+	padding-top:0;
 	padding-right:5%;
-	margin-left:20%;
-	margin-right:10%;
-	/*background-color :#0f3187; bleu contraste*/
-	background: linear-gradient(#C24 0%, #faa 33%, #C24 100%);
-	opacity: 0.93;
+	margin-left:30%;
+	background-color :#0f3187; /*bleu contraste*/
+	opacity: 0.83;
 	border:1px solid black;
-	border-radius:0 0 1em 1em;
+	border-radius:1em;
 	width:70%;
-	box-shadow: 10px 5px 5px rgba(0,0,0,0.75);
 }
 
 
@@ -63,74 +59,55 @@ footer {
     bottom: 0%;
     height: 2,5em;/*taille3 du footer*/
 	width:100%;
-	padding-bottom:3px;
-	padding-left:2em;
-	background:#faa;
+	padding-bottom:0;
+	background:#B7CF2F;
 	color: gray;
 	font-size:70%;
-	border-radius: 1em 1em 0 0;
 }
- 
+
 section, article, aside, header, footer, nav, hgroup {
   display: block;
 }
- 
+
 h1 {
- font-size: 200%; 
- color: black;
+ font-size: 200%;
+ color: white;
  text-align: center;
- font-family: Vijaya, Garamond, sans-serif;;
+ font-family: Viner Hand ITC;
  }
- 
+
 h2 {
- font-size: 150%; 
- font-family: Vijaya, Garamond, sans-serif;;
- color: #000; 
+ font-size: 150%;
+ font-family: Viner Hand ITC;
+ color: #ffffff;
  padding-left: 0em;
  text-align: left;
  clear: left;
  }
- 
+
  h2::first-letter {
   text-transform: capitalize;
 }
 
-titreSpectacle, .titreSpectacle{
+titreSpectacle{
 	text-transform: uppercase;
 	font-size:95%;
 	font-weight: bold;
-	color:black;
-	background:rgba(255,255,255,0.25);
+	color:white;
 	}
 
-
-.navbar li	titreSpectacle{
-  	display:inline-block;
-		width:100%;
-		color:black;
-		margin-left:-12px;
-		margin-bottom:5px;
-		padding-left:1em;
-		padding-top: 3px;
-		padding-bottom: 3px;
-		background:none;
-		border: 0.5px solid rgba(0,0,0,0.5);
-		background:rgba(255,255,255,0.5);
-		border-radius:0 0.5em 0.5em 0;		
-		}
-	
 bandeau>titreSpectacle{
 	text-transform: uppercase;
 	font-size:50%;
 	font-weight: bold;
-	color:black;
+	color:white;
 }
 
 Horaire{
 	font-weight: bold;
 }
 
-Lieu{	
+Lieu{
 		font-weight: normal;
 }
 
@@ -145,60 +122,50 @@ main{
 
 }
 
-
-.decalage{ 
+.decalage{
 /*Décaler le texte pour voir la statue...*/
- padding: 0% 5% 0% 15%;
+ padding: 0% 5% 0% 35%;
  font-size: 100%
 }
 /*Decaler le texte pour voir la statue...*/
-.decalage30{ 
+.decalage30{
  padding: 0% 5% 0% 30%;
  font-size: 100%
 }
 
 /*reflechir s'il n'y a pas du netoyage à faire ici*/
 p{
- color: black ; 
- padding: 0% 3% 0% 3%;
- text-indent: 3em;
+ color: white ;
+ padding: 0% 5% 0% 10%;
+ text-indent: 3 em;
  font-size: 100%;
  text-align:justify;
  }
 
-figurecaption{
-	color:#888;
-}
+
 
  p::first-letter {
   text-transform: capitalize;
 }
- 
+
  ul,li,td {
  /*text-indent: 0.02em;*/
- padding-inline-start: 10px;
  }
- 
- ul li::before {
-  content: "\200B";
-}
- 
+
  li {
-  margin-bottom: 0.4em;
-	list-style-type: none;
+  margin-bottom: 0.02em;
 }
-  
-/*******************************   Gestion des liens *****************************/	
+
+/*******************************   Gestion des liens *****************************/
 a:link {
- color: black;
- text-decoration: underline rgba(0,0,255,0.25) ;
+ color: white;
  }
 a:visited {
- color: black;
+ color: white;
  }
 a:hover {
- color: black;
- border: 1px solid #0f3187;
+ color: white;
+ background-color: #0f3187;
  }
 a:active, a:focus {
  color: black;
@@ -206,17 +173,17 @@ a:active, a:focus {
 }
 
 a[href^="https"]::before {
-	color:black;
+	color:white;
   content: "🔗 ";
 }
 
 a[href^="mailto"]::before {
-  color:black;
+  color:white;
   content: "📧 ";
 }
 
 a[href^="tel"]::before {
-	color:black;
+	color:white;
   content: "📞 ";
 }
 
@@ -227,7 +194,7 @@ a[href^="tel"]::before {
 */
 
 
-/*****************************************pour invité les menbre du CA a commenter... *********************************/ 
+/*****************************************pour invité les menbre du CA a commenter... *********************************/
 #comment{
 background:red;
 color:yellow
@@ -239,7 +206,7 @@ text-align: right;
 
 
 /*****************************************est ce utilisé*/
-/*/ est ce utilisé?*/ 
+/*/ est ce utilisé?*/
 #pastille{
 	float: left;
 	display: block;
@@ -261,11 +228,11 @@ text-align: right;
 	float:left;
 }
 
-/*******************************   Gestion des images *****************************/	
+/*******************************   Gestion des images *****************************/
 img{
-	border:1px solid #000;
+	border:1px solid #b9e398;
 	border-radius:0.5em;
-	/*text-align: left;*/	
+	/*text-align: left;*/
 }
 
 img.displayed {
@@ -300,10 +267,6 @@ figure.lieu{
     padding-right: 1em;
 }
 
-figure#spectacle{
-	width: 60%;	
-}
-
 figure.apercu{
 	display: inline-block;
 	width: 20%;
@@ -323,7 +286,7 @@ figcaption{
 
 #contact{
 	font-size:150%;
-	color:black;
+	color:white;
 	text-align: right;
 	font-variant:small-caps;
 }
@@ -337,7 +300,7 @@ figcaption{
 }
 
 .interne {
-  table-layout: fixed; 
+  table-layout: fixed;
   width:50em;
   height:3em;
   border: 1px solid red;
@@ -364,16 +327,14 @@ td {
   text-overflow: ellipsis;
 }
 
-/******************************* Gestion des bulles ****************************/ 
+/******************************* Gestion des bulles ****************************/
 .Spectacle{
-	border:1px solid black;
+	border:1px solid white;
 	border-radius:2em;
 	text-align: justify;
 	padding: 1em 1em 1em 1em;
-	margin-bottom: 1em;
-	background:   #faa;
-	border: 1px solid black;
-	box-shadow: 10px 5px 5px rgba(0,0,0,0.75);
+	margin-bottom: 2em;
+	background-color:#0f3187; /*bleu contraste*/
 }
 
 
@@ -383,21 +344,19 @@ td {
 	border-radius:2em;
 	text-align: justify;
 	padding: 1em 1em 1em 1em;
-	margin-top:1em;
-	margin-bottom:1em;
-  background:   #faa;
-	border: 1px solid black;
-	box-shadow: 10px 5px 5px rgba(0,0,0,0.75);
+	margin-top:2em;
+	margin-bottom:2em;
+    background-color :#305370; /*bronze*/
 }
 
 
 .Panier{
-	border:1px solid black;	
+	border:1px solid white;
 	border-radius:0 0 8em 8em;
 	text-align: center;
 	padding: 1em 1em 1em 1em;
 	margin-bottom: 2em;
-	background-color:#305370; /*bronze*/ 
+	background-color:#305370; /*bronze*/
 	font-family: courrier;
 	font-size:80%;
 	margin-left: auto;
@@ -405,21 +364,18 @@ td {
 }
 
 .petitPanier{
-	color:black;
-	width:18%;
-	border-width: 0px 1px 2px 1px;
-	border-color: black;
-	border-style: solid;
+	color:white;
+	width:12%;
+	border:1px solid white;
 	border-radius:0 0 2em 2em;
 	text-align: center;
-	background-color:#d83858; /*bronze*/ 
-	box-shadow: 10px 5px 5px rgba(0,0,0,0.75);
+	background-color:#305370; /*bronze*/
 	font-family: courrier;
 	font-size:100%;
 	padding: 0px 2px 2px;
 	position: fixed;
-	top: 5%;
-	right:5%;
+	top: 12%;
+	right:1%;
 }
 
 .versLeHaut{
@@ -428,26 +384,26 @@ td {
 	/*text-orientation:sideways;*/
 	text-align:left;
 }
-/*******************************   Gestion des petits carrés... *****************************/	
+/*******************************   Gestion des petits carrés... *****************************/
 .emballage {
     float:left;   /*width:12,5%;*/
 }
 .jourEntier {
    float:left;
-   border: 1em black;
+   border: 1em white;
    padding: 5px 5px 5px 5px;
 }
 
 .shadowboxChoisie{
  width: 10em;
-  height:10em; 
+  height:10em;
   font-size:50%;
   border: 1px solid #333;
   box-shadow: 5px 5px 3px #333;
   margin: 2px;
   padding: 3px;
   Background-color:#0f3187;
-  
+
 }
 
 .shadowboxNormal{
@@ -467,7 +423,7 @@ td {
   border: 1px solid #333;
   box-shadow: 5px 5px 3px #444;
   margin: 2px;
-  padding: 3px; 
+  padding: 3px;
 }
 
 
@@ -495,27 +451,14 @@ td {
 }
 
 
-
-
-
-
-
-
-
-
 .menu{
   position: fixed;
   left: 0em;
    top: 4%;
   bottom: 3%;
   width:9em;
-  border:1px solid black;
+  border:1px solid white;
   background-color:#0f3187; /*bleu contraste*/
-	
-	background: linear-gradient(to right, #C24 0%, #faa 33%, #C24 100%);
-	opacity: 0.93;
-	border-radius:0 1em 1em 0;
-	box-shadow: 10px 5px 5px rgba(0,0,0,0.75);
 }
 
 .patchwork{
@@ -544,13 +487,13 @@ td {
 
 
 
-  
 
 
 
 
 
-/* selecteur universel pour quand je suis coincée et que je veux voir ce qui ne va pas. 
+
+/* selecteur universel pour quand je suis coincée et que je veux voir ce qui ne va pas.
 
 * [lang^=fr] {
 color:green}
@@ -564,9 +507,6 @@ color:green}
 
 .floating + * {
   clear: left;
-  
+
 }
 */
-
-
- 
