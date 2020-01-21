@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" href="css/style2.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
-    <title>Théâtres de Bourbon</title>
-  </head>
-  <body>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+  <title>Théâtres de Bourbon : Statistiques</title>
+</head>
 
-    <header class="bandeau">
-      <h1 id="titrepage">Théâtres de Bourbon</h1>
-    </header>
+<body>
 
-    <nav class="menu">
-      <ul class="navbar">
-        <!--
+  <header class="bandeau">
+    <h1 id="titrepage">Théâtres de Bourbon</h1>
+  </header>
+
+  <nav class="menu">
+    <ul class="navbar">
+      <!--
         <div id="vignette">
             <img class="vignette" src="data/img/logo.jpg" alt="[logo de l'association vers l'accueil du site]" width="10%" height="10%" decoding="low" onclick="acceuil()">
         </div>
@@ -32,24 +33,25 @@
       <li>
         <a href="stats.html">Statistiques</a>
       </li>
-      </ul>
-    </nav>
+    </ul>
+  </nav>
 
-    <!--<div class="petitPanier">
+  <!--<div class="petitPanier">
       Billets en vente exclusivement sur les lieux du festival: Monétay, Monteignet, Veauce du 2 au 6 août dès 11h00 et le 6 août à Moulins de 19h00 à 20h00. Attention! à Moulins le début du spectacle à 20h00.
 
       <table></table>
     </div> -->
 
-    <div class="decalage">
-      <canvas id="canvas"></canvas>
-    </div>
-
-    <button type="button" onclick ="exe1()">Nombres de Places Vendues</button>
+  <div class="decalage">
+    <canvas id="canvas"></canvas>
+    <button type="button" onclick="exe1()">Nombres de Places Vendues</button>
     <button type="button" onclick="exe2()">"Reçettes et Dépense ainsi que leurs détails"</button>
+  </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/canvas.js"></script>
 
-  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/canvas.js"></script>
+
+</body>
+
 </html>
